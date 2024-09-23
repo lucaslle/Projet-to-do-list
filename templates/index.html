@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST</title>
-        <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-    
-    <div class="h1">
-        <h1 >TO DO LIST</h1>
-    </div>
-    <div style="display: flex;">
-    <div class="form">
-        <form action="/add" method="post"></form>
-        <div class="elementForm">
-            <label for="title">Title:</label><br>
-
-            <input type="text" id="title" name="title" required><br><br>
-        </div>
-        <div class="elementForm">
-            <label for="note">Note : </label>
-            <br>
-            <textarea type="text" style="resize: none;">
-            </textarea>
-        </div>
-        <div class="elementForm">
-            <label for="etat">Etat:</label>
-            <br>
-            <input list="Etat" id="etat" name="Etat" required/>
-            <datalist id="Etat">
-                <option value={{Etat[0]}}></option>
-                <option value={{Etat[1]}}></option>
-                <option value={{Etat[2]}}></option>
-                <option value={{Etat[3]}}></option>
-            </datalist>
-        </div>
-        <div class="divbtform">
-            <button type="submit" class="btform">ADD</button>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TO DO LIST</title>
+            <link rel="stylesheet" href="/static/styles.css">
+    </head>
+        <body>
             
-        </form>
-    </div>
+            <div class="h1">
+                <h1 >TO DO LIST</h1>
+            </div>
+            <div style="display: flex;">
+                <div class="form">
+                    <form action="/add" method="post"></form>
+                        <!------------------------------------titre task -------------------------------------->
+                        <div class="elementForm">
+                            <label for="title">Title :</label><br>
 
-    {% for task in Tasks %}
-    <div class="table">
-        <ul>
-            <li> <input type="checkbox">{{ task.status }} Titre : {{ task.title }} Note : {{ task.note }} Etat : {{ task.etat }}</li>
-        </ul>
-    </div>
-    {% endfor %}
-</div>
-</body>
+                            <input type="text" id="title" name="title" required placeholder="Enter task tilte"><br><br>
+                        </div>
+                        <!------------------------------------note task ---------------------------------------->
+                        <!-- <div class="elementForm">
+                            <label for="note">Note : </label>
+                            <br>
+                            <textarea type="text" style="resize: none;" name="note">
+                            </textarea>
+                        </div> -->
+                        <!------------------------------------different etat ----------------------------------->
+                        <div class="elementForm">
+                            <label for="etat">Etat :</label>
+                            <br>
+                            <input list="Etat" id="Etat" name="Etat" required placeholder="select "/>
+                            <datalist id="Etat">
+                                <option value=Tranquille></option>
+                                <option value=OK></option>
+                                <option value=MID></option>
+                                <option value=MERDE!!!></option>
+                            </datalist>
+                        </div>
+                <!------------------------------------ bt submit -------------------------------------->
+                        <div class="divbtform">
+                            <button type="submit" class="btform">ADD</button>
+                        </div>
+                    
+                    </form>
+                <!--------------------------------- fin du form --------------------------------------->
+            </div>
+
+            
+            <div class="table">
+                {% for task in Tasks %}
+                    <ul>
+                        <li> <input type="checkbox">            Titre : {{ task.title }}          <br>                       Etat : {{ task.etat }}</li>
+                    </ul>
+                {% endfor %}
+            </div>
+            
+        </div>
+    </body>
 </html>

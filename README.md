@@ -1,13 +1,11 @@
 - focus back
     - add task
     - delete task
-    - checkbox task terminé
-    
+    - checkbox task terminé  /en cours
     / modif task / a voir
     - rajouter des champs comme : 
-            - etat d'urgence de la task
-            - descriptif 
-            - 
+            - etat d'urgence de la task /en cours
+            - descriptif /en cours
     
     
     - suivi de stat :
@@ -17,7 +15,7 @@
 
 
 - front   
-    - afficher les tasks 
+    - afficher les tasks /0K
     - changer la couleur en fonction de son etat
     - poubelle a nonolito
     - design pas trop degueulasse  /0K

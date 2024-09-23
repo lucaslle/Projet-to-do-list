@@ -4,10 +4,15 @@ body {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-decoration: none;
+    background-image: url("https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg?cs=srgb&dl=pexels-pixabay-355770.jpg&fm=jpg");
+    background-size: cover;
+    backdrop-filter: blur(7px);
+    max-width: 100%;
   }
 
 body div.form{
-    margin-left: 3%;
+    margin-left: 4%;
   }
 
 div.h1{
@@ -20,34 +25,68 @@ div.form {
   background-color: rgb(0, 0, 0);
   width: 40%;
   text-align: center;
-  border-radius: 100px 0 100px 0;
+  border-radius: 30px;
   color: aliceblue;
-  
+  height: max-content;
+  margin-top: 1%;
 }
 
 div.form input{
   justify-content: center;
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 15px 0 15px 0;
+  border-radius: 7px;
+  width: 70%;
 }
+
+div.form textarea{
+  justify-content: center;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 7px;
+  width: 70%;
+}
+
+
 div.elementForm{
   padding-top: 4%;
 }
 
 button.btform {
   width: 20%;
-  height: 15%;
-  border-radius: 15px;
+  font-size: large;
+  border-radius: 5px;
   font-size: 1rem;
+  padding: 10px;
+  cursor: pointer;
+}
+
+button.btform:hover {
+  background-color: rgb(184, 184, 184);
 }
 
 div.divbtform{
-  padding: 5%;
+  padding: 7%;
+  
 }
 
 div.table{
   width: 50%;
-  padding-left: 10%;
-  font-size: 2rem;
+  overflow-y:auto;
+  max-height: 800px;
+  margin-left: 50px;
+  padding-right: 10px;
 }
+
+div.table ul li{
+  font-size: 25px;
+  list-style: none;
+  color: aliceblue;
+  background-color: black;
+  padding: 2%;
+  border-radius: 25px;
+  text-align: center;
+}
+
+
+

@@ -1,0 +1,14 @@
+POST http://localhost:8000/add
+Content-Type: application/json
+
+{
+    "title" : "faire la to do",
+    "note": "evfzvfjhevfjefefef",
+    "etat" : "MERDE!!!!!"
+}
+
+###
+GET  http://localhost:8000/add
+
+###
+DELETE 
