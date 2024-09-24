@@ -9,6 +9,11 @@ app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+Tasks = [
+    {"id": 1, "title": "to do","note" : "marche zby j'en ai marre", "etat": "arrete"}
+    
+]
+
 
 @app.get("/add")
 async def read_root(request: Request):
@@ -22,15 +27,19 @@ async def add_task(task_data : Create_task) -> taskId:
     print(Tasks)
     return task
 
-Tasks = [
-    {"id": 1, "title": "to do","note" : "marche zby j'en ai marre", "etat": "arrete"},
-    {"id": 2, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "arrete"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 4, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 5, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 6, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 7, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 8, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 9, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 10, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"}
-]
+@app.delete("/delete/{task_id}")
+async def delete_task(task_id: int):
+    for index, task in enumerate(Tasks):
+        if task['id'] == task_id:
+            deleted_task = Tasks.pop(index)
+            return {"message": "Task deleted", "task": deleted_task, "Tasks":Tasks }
+
+
+@app.put("/update/{task_id}")
+async def update_task(task_id: int, updated_data: Create_task):
+    for index, task in enumerate(Tasks):
+        if task['id'] == task_id:
+            Tasks[index]['title'] = updated_data.title
+            Tasks[index]['note'] = updated_data.note
+            Tasks[index]['etat'] = updated_data.etat
+            return {"message": "Task updated", "task": Tasks[index]}

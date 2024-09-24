@@ -2,13 +2,23 @@ POST http://localhost:8000/add
 Content-Type: application/json
 
 {
-    "title" : "faire la to do",
+    "title" : "aller au sport",
     "note": "evfzvfjhevfjefefef",
-    "etat" : "MERDE!!!!!"
+    "etat" : "okay"
 }
 
 ###
 GET  http://localhost:8000/add
 
 ###
-DELETE 
+DELETE http://localhost:8000/delete/10
+
+###
+PUT http://localhost:8000/update/10
+Content-Type: application/json
+
+{
+  "title": "Updated Task 2",
+  "note": "This is the updated description",
+  "etat": "modifie"
+}

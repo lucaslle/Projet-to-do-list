@@ -9,6 +9,9 @@ body {
     background-size: cover;
     backdrop-filter: blur(7px);
     max-width: 100%;
+    background-attachment: fixed;
+    margin:0px;
+    padding:0px;
   }
 
 body div.form{
@@ -88,15 +91,16 @@ div.table ul li{
   font-size: 25px;
   list-style: none;
   color: aliceblue;
-  background-color: black;
-  padding: 2%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5%;
   border-radius: 25px;
-  text-align: center;
+  display: flexbox;
 }
 
 
 .stats{
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
   text-align: center;
   border-radius: 30px;
   color: rgb(0, 0, 0);
@@ -111,12 +115,12 @@ div.table ul li{
 
 
 .stats-info {
-	margin-top: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	position: relative;
-  padding-top: 5%;
+  padding-top: 1%;
+
 }
 
 .graph-container {
@@ -153,5 +157,25 @@ div.table ul li{
 
 
 .info span {
-	color: #6d6d6d;
+	color: #949090;
+}
+
+.info{
+  background-color: #000000;
+  color: aliceblue;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+.table a i{
+  cursor: pointer;
+  color: aliceblue;
+  
+}
+
+.table i:hover{
+  cursor: pointer;
+  font-size: 110%;
+  transition-duration: 0.25s;
+  color: rgb(255, 0, 0);
 }

@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TO DO LIST</title>
             <link rel="stylesheet" href="/static/styles.css">
+            <script src="https://kit.fontawesome.com/5601830d5d.js" crossorigin="anonymous"></script>
     </head>
         <body>
-            
             <div class="h1">
                 <h1 >TO DO LIST</h1>
             </div>
@@ -63,29 +63,26 @@
                       a 15.9155 15.9155 0 0 1 0 -31.831" />
                                     </svg>
                                 </div>
-                                <p>Total: 7</p>
+                                <p>Total : 7</p>
                             </div>
                 
                             <div class="info">
-                                <p>Nombre de task à faire <br /><span>10</span></p>
-                                <p>Task faites  <span>7</span></p>
-                                <p>Objectif completé à  <span>70%</span></p>
+                                <p>Nombre de task à faire : <br /><span>10</span></p>
+                                <p>Task faites : <span>7</span></p>
+                                <p>Objectif :  <span>70%</span></p>
                             </div>
                         </div>
                     
                     
                 </div>
             </div>
-
-            
-            <div class="table">
-                {% for task in Tasks %}
-                    <ul>
-                        <li> <input type="checkbox">            Titre : {{ task.title }}          <br>                       Etat : {{ task.etat }}</li>
-                    </ul>
-                {% endfor %}
+                <div class="table">
+                    {% for task in Tasks %}
+                        <ul>
+                            <li> <input type="checkbox">            Titre : {{ task.title }}                        Etat : {{ task.etat }}  <a href="#"><i class="fa-solid fa-pen"></i></a><a href="/DELETE"><i class="fa-solid fa-trash"></i></a> </li>
+                        </ul>
+                    {% endfor %}
+                </div>
             </div>
-            
-        </div>
-    </body>
+        </body>
 </html>
