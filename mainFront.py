@@ -17,6 +17,7 @@ Tasks = [
 
 @app.get("/add")
 async def read_root(request: Request):
+    print(Tasks)
     return templates.TemplateResponse("index.html", {"request": request, "Tasks": Tasks})
 
 @app.post("/add")
@@ -32,6 +33,7 @@ async def delete_task(task_id: int):
     for index, task in enumerate(Tasks):
         if task['id'] == task_id:
             deleted_task = Tasks.pop(index)
+            print(Tasks)
             return {"message": "Task deleted", "task": deleted_task, "Tasks":Tasks }
 
 
@@ -42,4 +44,5 @@ async def update_task(task_id: int, updated_data: Create_task):
             Tasks[index]['title'] = updated_data.title
             Tasks[index]['note'] = updated_data.note
             Tasks[index]['etat'] = updated_data.etat
+            print(Tasks)
             return {"message": "Task updated", "task": Tasks[index]}

@@ -9,16 +9,18 @@ Content-Type: application/json
 
 ###
 GET  http://localhost:8000/add
+s
+###
+# Pour supprimer une task u suffit de rentrer son id a la fin de la ligne si dessous
+DELETE http://localhost:8000/delete/44
 
 ###
-DELETE http://localhost:8000/delete/10
-
-###
-PUT http://localhost:8000/update/10
+# Pour supprimer une task u suffit de rentrer son id a la fin de la ligne si dessous
+PUT http://localhost:8000/update/8
 Content-Type: application/json
 
 {
-  "title": "Updated Task 2",
-  "note": "This is the updated description",
-  "etat": "modifie"
+  "title": "modif task",
+  "note": "on s'en fiche la note ne s'affiche pas",
+  "etat": "modifié chef"
 }

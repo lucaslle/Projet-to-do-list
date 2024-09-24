@@ -79,7 +79,7 @@
                 <div class="table">
                     {% for task in Tasks %}
                         <ul>
-                            <li> <input type="checkbox">            Titre : {{ task.title }}                        Etat : {{ task.etat }}  <a href="#"><i class="fa-solid fa-pen"></i></a><a href="/DELETE"><i class="fa-solid fa-trash"></i></a> </li>
+                            <li> <input type="checkbox">            Titre : {{ task.title }}                        Etat : {{ task.etat }}  <a href="/update"><i class="fa-solid fa-pen"></i></a><a href="/delete"><i class="fa-solid fa-trash"></i></a> </li>
                         </ul>
                     {% endfor %}
                 </div>
