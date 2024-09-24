@@ -12,40 +12,69 @@
                 <h1 >TO DO LIST</h1>
             </div>
             <div style="display: flex;">
-                <div class="form">
-                    <form action="/add" method="post"></form>
-                        <!------------------------------------titre task -------------------------------------->
-                        <div class="elementForm">
-                            <label for="title">Title :</label><br>
+            <div class="left_part">
+                <divs>
+                    <div class="form">
+                        <form action="/add" method="post"></form>
+                            <!------------------------------------titre task -------------------------------------->
+                            <div class="elementForm">
+                                <label for="title">Title :</label><br>
 
-                            <input type="text" id="title" name="title" required placeholder="Enter task tilte"><br><br>
-                        </div>
-                        <!------------------------------------note task ---------------------------------------->
-                        <!-- <div class="elementForm">
-                            <label for="note">Note : </label>
-                            <br>
-                            <textarea type="text" style="resize: none;" name="note">
-                            </textarea>
-                        </div> -->
-                        <!------------------------------------different etat ----------------------------------->
-                        <div class="elementForm">
-                            <label for="etat">Etat :</label>
-                            <br>
-                            <input list="Etat" id="Etat" name="Etat" required placeholder="select "/>
-                            <datalist id="Etat">
-                                <option value=Tranquille></option>
-                                <option value=OK></option>
-                                <option value=MID></option>
-                                <option value=MERDE!!!></option>
-                            </datalist>
-                        </div>
-                <!------------------------------------ bt submit -------------------------------------->
-                        <div class="divbtform">
-                            <button type="submit" class="btform">ADD</button>
+                                <input type="text" id="title" name="title" required placeholder="Enter task tilte"><br><br>
+                            </div>
+                            <!------------------------------------note task ---------------------------------------->
+                            <!-- <div class="elementForm">
+                                <label for="note">Note : </label>
+                                <br>
+                                <textarea type="text" style="resize: none;" name="note">
+                                </textarea>
+                            </div> -->
+                            <!------------------------------------different etat ----------------------------------->
+                            <div class="elementForm">
+                                <label for="etat">Etat :</label>
+                                <br>
+                                <input list="Etat" id="Etat" name="Etat" required placeholder="select "/>
+                                <datalist id="Etat">
+                                    <option value=Tranquille></option>
+                                    <option value=OK></option>
+                                    <option value=MID></option>
+                                    <option value=MERDE!!!></option>
+                                </datalist>
+                            </div>
+                    <!------------------------------------ bt submit -------------------------------------->
+                            <div class="divbtform">
+                                <button type="submit" class="btform">ADD</button>
+                            </div>
+                        
+                        </form>
+                    <!--------------------------------- fin du form --------------------------------------->
+                </div>
+                <div class="stats">
+                    
+                        <div class="stats-info">
+                            <div class="graph-container">
+                                <div class="percent">
+                                    <svg viewBox="0 0 36 36" class="circular-chart">
+                                        <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="70, 100" d="M18 2.0845
+                      a 15.9155 15.9155 0 0 1 0 31.831
+                      a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    </svg>
+                                </div>
+                                <p>Total: 7</p>
+                            </div>
+                
+                            <div class="info">
+                                <p>Nombre de task à faire <br /><span>10</span></p>
+                                <p>Task faites  <span>7</span></p>
+                                <p>Objectif completé à  <span>70%</span></p>
+                            </div>
                         </div>
                     
-                    </form>
-                <!--------------------------------- fin du form --------------------------------------->
+                    
+                </div>
             </div>
 
             

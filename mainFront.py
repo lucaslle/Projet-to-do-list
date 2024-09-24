@@ -26,11 +26,11 @@ Tasks = [
     {"id": 1, "title": "to do","note" : "marche zby j'en ai marre", "etat": "arrete"},
     {"id": 2, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "arrete"},
     {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
-    {"id": 3, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"}
+    {"id": 4, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
+    {"id": 5, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
+    {"id": 6, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
+    {"id": 7, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
+    {"id": 8, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
+    {"id": 9, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"},
+    {"id": 10, "title": "Apprendre FastAPI","note" : "gekgege", "etat": "stop"}
 ]
